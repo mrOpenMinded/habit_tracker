@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 //connect to the database
 // 'mongodb://127.0.0.1:27017/habit_tracker'
-mongoose.connect('mongodb+srv://maapaa1073:NglDU4QWWJ2Wp012@cluster0.aei2dmf.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGODB_URI);
 
 //acquire the connection(to check if it's successful)
 const db = mongoose.connection;

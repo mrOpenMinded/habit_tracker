@@ -3,6 +3,7 @@
 const express = require('express');
 const port = 9000;
 const app = express();
+const path=require('path');
 
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
@@ -30,7 +31,7 @@ app.set('layout extractScripts', true);
 // set up the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
-app.use(express.static('./assets'));
+app.use(express.static(path.join(__dirname,'assets')));
 
 //mongo store is used to store the session cookie
 app.use(session({

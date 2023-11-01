@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 //connect to the database
 // 'mongodb://127.0.0.1:27017/habit_tracker'
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);//change 2-=31/10
 
 //acquire the connection(to check if it's successful)
 const db = mongoose.connection;
@@ -22,3 +22,7 @@ module.exports=db;
 
 
 // NglDU4QWWJ2Wp012
+
+// MONGODB_URI------mongodb+srv://maapaa1073:NglDU4QWWJ2Wp012@cluster0.aei2dmf.mongodb.net/?retryWrites=true&w=majority
+
+// render for backend and mongodb atlas instead of compass
